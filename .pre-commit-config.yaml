@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 Alexander Dahl <post@lespocky.de>
+# SPDX-License-Identifier: 0BSD
+---
+repos:
+  - repo: https://codeberg.org/fsfe/reuse-tool
+    rev: v6.2.0
+    hooks:
+      - id: reuse
