@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Alexander Dahl <post@lespocky.de>
+# SPDX-License-Identifier: 0BSD
+
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles

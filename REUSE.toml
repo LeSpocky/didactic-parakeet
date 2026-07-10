@@ -1,0 +1,6 @@
+version = 1
+
+[[annotations]]
+path = "README.md"
+SPDX-FileCopyrightText = "2026 Alexander Dahl <post@lespocky.de>"
+SPDX-License-Identifier = "0BSD"
