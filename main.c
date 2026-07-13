@@ -21,6 +21,8 @@ int main() {
 				 myerrno, strerror(myerrno) );
 		return EXIT_FAILURE;
 	}
+	snprintf( x, 10 * sizeof(char), "XXX" );
+	printf( "%s\n", x );
 
 	y = malloc( 10 * sizeof(char) );
 	if ( y == NULL )
@@ -30,12 +32,12 @@ int main() {
 				 myerrno, strerror(myerrno) );
 		return EXIT_FAILURE;
 	}
+	snprintf( y, 10 * sizeof(char), "YYY" );
+	printf( "%s\n", y );
 
 	free( x );
 
 	// printf( "x[5]: %c\n", x[5] );
-
-	printf( "didactic-parakeet\n" );
 
 	return EXIT_SUCCESS;
 }
