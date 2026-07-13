@@ -4,10 +4,12 @@ cmake_minimum_required(VERSION 3.18)
 project(didactic-parakeet)
 
 include(CheckCCompilerFlag)
+include(CMakeDependentOption)
 include(GNUInstallDirs)
 
 option(DP_WITH_ASAN "build with Asan" OFF)
-option(DP_WITH_ATOMIC "link against libatomic" OFF)
+cmake_dependent_option(DP_WITH_ATOMIC "link against libatomic" OFF
+					   "DP_WITH_ASAN" OFF)
 
 message(STATUS "Target system: ${CMAKE_SYSTEM_NAME}")
 message(STATUS "Target processor: ${CMAKE_SYSTEM_PROCESSOR}")
