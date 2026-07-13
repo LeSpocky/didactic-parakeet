@@ -46,7 +46,7 @@ target_link_libraries(didactic-parakeet
 	PRIVATE
 		$<$<BOOL:${DP_WITH_ASAN}>:${DP_ASAN_FLAG}>
 		$<$<BOOL:${DP_WITH_ASAN}>:${DP_OMITFP_FLAG}>
-		$<$<BOOL:${DP_ASAN_WITH_ATOMIC}>:${DP_LINK_OPTION}>
+		$<$<BOOL:${DP_WITH_ATOMIC}>:${DP_LINK_OPTION}>
 )
 
 install(TARGETS didactic-parakeet DESTINATION ${CMAKE_INSTALL_BINDIR})
