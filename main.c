@@ -35,5 +35,7 @@ int main() {
 
 	// printf( "x[5]: %c\n", x[5] );
 
+	printf( "didactic-parakeet\n" );
+
 	return EXIT_SUCCESS;
 }
