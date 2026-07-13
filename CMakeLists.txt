@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 3.18)
 project(didactic-parakeet)
 
 include(CheckCCompilerFlag)
+include(GNUInstallDirs)
 
 option(DP_WITH_ASAN "build with Asan" OFF)
 option(DP_WITH_ATOMIC "link against libatomic" OFF)
@@ -47,3 +48,5 @@ target_link_libraries(didactic-parakeet
 		$<$<BOOL:${DP_WITH_ASAN}>:${DP_OMITFP_FLAG}>
 		$<$<BOOL:${DP_ASAN_WITH_ATOMIC}>:${DP_LINK_OPTION}>
 )
+
+install(TARGETS didactic-parakeet DESTINATION ${CMAKE_INSTALL_BINDIR})
