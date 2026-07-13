@@ -7,6 +7,11 @@ include(CheckCCompilerFlag)
 
 option(DP_ASAN "build with Asan" OFF)
 
+message(STATUS "Target system: ${CMAKE_SYSTEM_NAME}")
+message(STATUS "Target processor: ${CMAKE_SYSTEM_PROCESSOR}")
+message(STATUS "C compiler target: ${CMAKE_C_COMPILER_TARGET}")
+message(STATUS "C compiler arch id: ${CMAKE_C_COMPILER_ARCHITECTURE_ID}")
+
 set(DP_ASAN_FLAG "-fsanitize=address")
 set(CMAKE_REQUIRED_FLAGS "${DP_ASAN_FLAG}")
 check_c_compiler_flag("${DP_ASAN_FLAG}" DP_ASAN_DETECTED)
