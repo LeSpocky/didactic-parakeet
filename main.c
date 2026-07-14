@@ -8,10 +8,18 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main() {
+int main( int argc, char *argv[] )
+{
 	int myerrno;
 	char *x;
 	char *y;
+
+#ifndef NDEBUG
+	if ( argc > 0 )
+	{
+		printf( "%s debug\n", argv[0] );
+	}
+#endif
 
 	x = malloc( 10 * sizeof(char) );
 	if ( x == NULL )
